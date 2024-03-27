@@ -1,1 +1,1 @@
-pytest --self-contained-html --html=pytest_report.html
+pytest --junitxml=report.xml
