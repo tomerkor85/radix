@@ -36,6 +36,6 @@ class Login(BaseSetup):
             page.locator('button', has_text='Login').click()
             time.sleep(30)
 
-    def get_login_status(self):
-        """ Return True if login success, False if login failed. """
-        url = self.page
+    # def get_login_status(self):
+    #     """ Return True if login success, False if login failed. """
+    #     url = self.page
