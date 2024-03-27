@@ -1,0 +1,1 @@
+pytest --self-contained-html --html=pytest_report.html
