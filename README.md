@@ -19,3 +19,16 @@
 - Connect to Jenkins link and click "Build Now"
 - Logs will display in the running job -> Test Results
 
+
+## Tests Coverage
+* Credentials:
+  * Valid credentials.
+  * Invalid credentials
+  * Correct Username and Incorrect Password.
+  * Incorrect Username and Correct Password.
+  * Incorrect Username and Empty Password.
+  * Empty Username and correct Password.
+  * Empty Username and Empty Password.
+* Elements:
+  * Verify "Reset password" exists and redirect to reset page.
+  * Make sure the UI username and password are display as expected.
