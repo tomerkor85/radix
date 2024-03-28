@@ -1,6 +1,4 @@
 import json
-import time
-
 from playwright.sync_api import sync_playwright
 
 
@@ -20,7 +18,8 @@ class Login(BaseSetup):
     def connect_to_website(self, username=None, password=None):
         with sync_playwright() as playwright:
             browser = playwright.chromium.launch(headless=True)
-            page = browser.new_page(no_viewport=True)
+            context = browser.new_context()
+            page = context.new_page()
             page.goto(self.data['url'])
             un = page.get_by_placeholder('Username')
             ps = page.get_by_placeholder("Password")
@@ -38,3 +37,6 @@ class Login(BaseSetup):
     # def get_login_status(self):
     #     """ Return True if login success, False if login failed. """
     #     url = self.page
+    # def close(self):
+    #     context.close()
+    #     browser.close()
